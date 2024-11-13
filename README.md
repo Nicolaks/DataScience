@@ -1,4 +1,33 @@
 # DataScience
 data_science
 
-Repo qui contient une lsite d'algos utilisé en Data science avec un cas pour exemple
+Here's the comparative table to consider when choosing a machine learning algorithm based on data characteristics and project goals.
+
+| Algorithm Type           | Algorithm                  | Primary Use                    | Data Type       | Data Size         | Relationship Complexity  | Noise Resilience    | Interpretability | Key Data Points for Choosing the Algorithm | Application Examples       |
+|--------------------------|----------------------------|--------------------------------|------------------|-------------------|--------------------------|---------------------|------------------|-------------------------------------------------------|----------------------------|
+| **Regression**           | Linear Regression          | Continuous prediction          | Numerical       | Small to medium   | Linear                   | Medium             | High            | Linear relationship between variables, low variance   | Pricing, scores, yields    |
+|                          | Non-linear Regression      | Continuous prediction          | Numerical       | Large             | Non-linear               | Medium             | Medium          | Complex or non-linear relationship between variables  | Complex curves, economics  |
+|                          | Lasso/Ridge Regression     | Continuous prediction, regularization | Numerical | Medium to large | Linear or near-linear    | High               | Medium          | Need to reduce insignificant variables               | Variable selection         |
+| **Classification**       | K-Nearest Neighbors (KNN)  | Supervised classification      | Numerical, Categorical | Small to medium | Non-linear               | Low               | Medium          | Low noise, non-linear relationships                   | Recommendations, image recognition |
+|                          | Decision Trees             | Classification and regression   | Numerical, Categorical | Small to medium | Non-linear               | Medium            | High           | Categorical or mixed data, importance of explicit rules | Medical diagnostics, credit risk |
+|                          | Random Forest              | Classification and regression   | Numerical, Categorical | Medium to large | Non-linear               | Medium            | Medium          | Varied data with noise, importance of robustness      | Forecasting, fraud detection |
+|                          | Support Vector Machines (SVM) | Binary classification   | Numerical       | Small to medium   | Linear or non-linear     | Low               | Medium          | Well-defined decision boundary, low noise             | Image recognition, bioinformatics |
+|                          | Neural Networks (NN)       | Classification and regression   | Numerical, Image, Text | Large           | Non-linear               | Medium to low     | Low            | Massive data, complex and non-linear relationships    | Speech recognition, image processing |
+| **Clustering**           | K-Means                    | Unsupervised clustering        | Numerical       | Medium to large   | Non-linear               | Low               | Low            | Distinct clusters, no complex shape                   | Customer segmentation       |
+|                          | Hierarchical Clustering    | Hierarchical grouping          | Numerical       | Small to medium   | Non-linear               | Medium            | Medium         | Natural hierarchical structure in data                | Phylogeny, segmentation     |
+|                          | DBSCAN                     | Clustering for noisy data      | Numerical       | Medium            | Non-linear               | High              | Medium         | Noisy data, irregular cluster shapes                  | Geospatial clustering       |
+| **Dimensionality Reduction** | PCA (Principal Component Analysis) | Dimensionality reduction | Numerical | Medium to large | Linear                    | Low               | Medium         | Linear relationships, visualization or variable reduction | Data preprocessing, visualization |
+|                          | t-SNE                      | Reduction and visualization    | Numerical       | Large             | Non-linear               | Low               | Low            | Visualization of complex clusters                     | Cluster visualization       |
+|                          | Autoencoders               | Reduction for complex data     | Image, Text     | Very large        | Non-linear               | Medium            | Low            | Unstructured data, advanced reduction                 | Image compression, text generation |
+| **Other**                | Naive Bayes                | Supervised classification      | Categorical, Text | Medium          | Linear                   | Medium            | Medium         | Independent variables, textual data                   | Email filtering, text classification |
+|                          | Logistic Regression        | Binary classification          | Numerical, Categorical | Small to medium | Linear                   | Medium            | High           | Binary explanatory variables and response             | Churn analysis, risk scoring |
+|                          | Gradient Boosting          | Classification and regression   | Numerical, Categorical | Medium to large | Non-linear               | Low to medium     | Medium         | Correlated and/or noisy variables, emphasis on performance | Finance, trend predictions  |
+
+### Key Points for Choosing the Algorithm
+- **Relationship Between Variables**: Linear algorithms are suitable for simple relationships, while non-linear algorithms handle complex ones better.
+- **Data Size**: Simple models work with smaller datasets, whereas neural networks and other complex models require large data volumes.
+- **Noise in Data**: If the data is noisy, choose noise-resilient algorithms like random forests or DBSCAN.
+- **Task Type**: The task (regression, classification, clustering, etc.) also guides algorithm selection based on the desired output type.
+- **Data Structure**: Complex structures like images and text require non-linear models, while simpler numerical or categorical data may work well with classical interpretable models.
+
+This table is designed to help guide algorithm selection based on data specifics and modeling goals.
